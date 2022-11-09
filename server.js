@@ -1,3 +1,5 @@
+const express = require('express')
+const app = express();
 const io = require('socket.io')(3000)
 
 const users = {}
@@ -15,3 +17,10 @@ io.on('connection', socket => {
     delete users[socket.id]
   })
 })
+
+app.get('/',(req,res)=>{
+  res.send("heellloooooo");
+  res.end();
+})
+
+app.listen(4000);
