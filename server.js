@@ -23,4 +23,6 @@ app.get('/',(req,res)=>{
   res.end();
 })
 
-app.listen(4000);
+app.listen(4000,,()=>{
+  console.log("hiiiii")
+});
